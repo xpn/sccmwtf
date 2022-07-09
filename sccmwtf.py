@@ -18,8 +18,6 @@ from cryptography.x509 import ObjectIdentifier
 from requests_toolbelt.multipart import decoder
 from requests_ntlm import HttpNtlmAuth
 
-# pip install requests requests-toolbelt requests-ntlm cryptography pyasn1 pyasn1-modules
-
 # Who needs just 1 date format :/
 dateFormat1 = "%Y-%m-%dT%H:%M:%SZ"
 dateFormat2 = "%Y%m%d%H%M%S.000000+000"
@@ -76,6 +74,7 @@ class CryptoTools:
         ).sign(key, hashes.SHA256())
 
         return cert
+
     @staticmethod
     def generateRSAKey():
         key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
@@ -245,7 +244,7 @@ class SCCMTools:
 
 if __name__ == "__main__":
     
-    print("SCCMWTF... by @_xpn_")
+    print("SCCMwtf... by @_xpn_")
 
     target_name = sys.argv[1]
     target_fqdn = sys.argv[2]
